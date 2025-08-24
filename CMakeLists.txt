@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.20)
 
 # Project Name
-project(cpp_lab_replit LANGUAGES CXX)
+project(cpp_lab_replit VERSION 0.1.0 LANGUAGES CXX)
 
 # Define C++-20 standard for all files
 set(CMAKE_CXX_STANDARD 20)
@@ -26,6 +26,9 @@ target_compile_options(app PRIVATE
     $<$<CXX_COMPILER_ID:GNU,Clang>:-Wall -Wextra -Wpedantic -Werror>
     $<$<CXX_COMPILER_ID:MSVC>:/W4 /WX>
 )
+
+#Project version 
+
 
 # --- Teste simples com CTest: valida a saída do programa ---
 include(CTest)
