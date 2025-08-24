@@ -1,8 +1,10 @@
-{ pkgs }: {
+{ pkgs }:
+{
 	deps = [
-		pkgs.clang
-		pkgs.ccls
-		pkgs.gdb
+		pkgs.cmake
+		pkgs.gcc
 		pkgs.gnumake
 	];
 }
+
+run = "cmake -S . -B build && cmake --build build -j && ./build/app"
